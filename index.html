@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medico - Clínica de Fisioterapia</title>
+    <!-- Conexión con la fuente  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Conexión con el favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Conexión a cdnjs Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Enlace para que HTML acceda a Font Awesome 7.0.1 para iconos  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="bar-top">
+        <div class="container">
+            <div class="row bartop-conc-red">
+                <div class="contacs">
+                    <a href="tel:+51098765432"><i class="fa-solid fa-phone"></i>(+51)098765432</a>
+                    <a class="class-font"
+                        href="mailto:Yeni Arriaran@yeniArrian.com?subject=Hola Buenas, Necesito Informacion"><i
+                            class="fa-solid fa-envelope">ArriIARAN@ARRIAN</i>
+                    </a>
+                </div>
+                <div class="Redes">
+                    <a href="https:/facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i><a>
+                            <a href="https://youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logocentroterapias.png" alt="Logo de la Clínica">
+            </a>
+
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="main-nav-active" href="index.html">INICIO</a></li>
+                    <li><a href="assets/pages/sobrenosotros.html">NOSOTROS</a></li>
+                    <li><a href="assets/pages/servicios.html">SERVICIOS</a></li>
+                    <li><a href="assets/pages/blogs.html">BLOGS</a></li>
+                    <li><a href="assets/pages/contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn btn-primary">AGENDAR</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <video id="hero-video" autoplay loop muted playsinline>
+                <source src="assets/video/videoloop.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero-content slide-in-left">
+                <h1>Acupuntura y Terapias Holísticas</h1>
+                <h2>con Yeni Arriarán</h2>
+                <p>Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Proin eget
+                    tortor.</p>
+                <a href="#services" class="btn btn-secondary">NUESTROS SERVICIOS</a>
+            </div>
+        </section>
+
+        <section id="info-bar">
+            <div class="container info-bar-grid">
+
+                <div class="info-box">
+                    <a href="#contact">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>Horario de Atención</h3>
+                    </a>
+                </div>
+
+                <div class="info-box">
+                    <a href="#contact">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Ubicación</h3>
+                    </a>
+                </div>
+
+                <div class="info-box">
+                    <a href="#contact">
+                        <i class="fa-solid fa-calendar"></i>
+                        <h3>Contacto</h3>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========= SECCIÓN ACERCA DE NOSOTROS ========= -->
+        <section id="about-us">
+            <div class="container">
+                <!-- CONTENEDOR PRINCIPAL DE LA REJILLA -->
+                <div class="about-us-grid">
+
+                    <div class="about-us-text">
+                        <div class="section-title">
+                            <h2>Acerca de nosotros</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, illo dolore enim vero
+                                aspernatur tempora sapiente corporis sunt deserunt animi.</p>
+                        </div>
+                    </div>
+
+                    <div class="video-container">
+                        <video class="promo-video" controls>
+                            <source src="assets/video/videopromocional.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="service padding-xl">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Nuestros servicios</h2>
+                </div>
+                <div class="row">
+                    <div class="col col-33 padding-small">
+                        <div class="service-box">
+                            <img class="img-fluid" src="assets/img/Acupuncture.jpg" alt="">
+                            <h3>Acupuntura</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ipsum, quae voluptatem
+                                pariatur autem nam fuga delectus repellat. Eos eaque incidunt molestiae repellat iste
+                                accusamus. Cum, quod aut. Laboriosam, eveniet.</p>
+                        </div>
+                    </div>
+                    <div class="col col-33 padding-small">
+                        <div class="service-box">
+                            <img class="img-fluid" src="assets/img/Auriculoterapia.jpg" alt="">
+                            <h3>Auriculoterapia</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ipsum, quae voluptatem
+                                pariatur autem nam fuga delectus repellat. Eos eaque incidunt molestiae repellat iste
+                                accusamus. Cum, quod aut. Laboriosam, eveniet.</p>
+                        </div>
+                    </div>
+                    <div class="col col-33 padding-small">
+                        <div class="service-box">
+                            <img class="img-fluid" src="assets/img/Fitoterapia.jpg" alt="">
+                            <h3>Fitoterapia</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ipsum, quae voluptatem
+                                pariatur autem nam fuga delectus repellat. Eos eaque incidunt molestiae repellat iste
+                                accusamus. Cum, quod aut. Laboriosam, eveniet.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center button-wrapper">
+                    <a class="button-service" href="#">Ver más</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCCIÓN DE TABLE DE PRECIOS -->
+        <section>
+            <section class="tarifas padding-xl">
+                <div class="container">
+                    <h2>Tarifas de servicios</h2>
+                    <div class="table-container">
+                        <table class="tbl-tarifa">
+                            <caption>Catálogo de precios</caption>
+                            <thead>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <th>Duración</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Acupuntura</td>
+                                    <td>60 minutos</td>
+                                    <td>80 soles</td>
+                                </tr>
+                                <tr>
+                                    <td>Auriculoterapia</td>
+                                    <td>45 minutos</td>
+                                    <td>60 soles</td>
+                                </tr>
+                                <tr>
+                                    <td>Fitoterapia</td>
+                                    <td>30 minutos</td>
+                                    <td>50 soles</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">Precios actualizados al 4 de octubre del 2025</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- ========= SECCIÓN CONOCE A NUESTRA ESPECIALISTA ========= -->
+        <section id="especialista">
+            <div class="container especialista-grid">
+                <div class="especialista-imagen">
+                    <img src="assets/img/terapista.jpg" alt="Foto de la especialista Yeni Arriarán">
+                </div>
+                <div class="especialista-info">
+                    <h2>Conoce a nuestra Terapista</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                        id est laborum. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="">
+            <div class="div2 section-padding">
+                <h1 class="titlePaciente padding-30 centrar_texto">Nuestros pacientes dicen...</h1>
+                <img class="centrar_img" src="assets/img/señorcomentario.jpeg">
+                <h3 class="nombrePaciente">Javier Linares</h3>
+                <p class="info_Paciente margin-bottom-25px">Scoliosis</p>
+                <p class="info_Paciente padding-bottom-10px">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <p class="centrarText padding-bottom-30px">★★★★★</p>
+            </div>
+
+            <!-- VIDEO YOUTUBE SHORT  -->
+        </section class="video-promocional padding-xl">
+        <div class="container-videopromo">
+            <h2>Promociones del Mes</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ullam hic, quas ex rerum voluptatem
+                ducimus temporibus neque ipsam, maxime esse cum amet tempore similique? Magni, corrupti doloremque. Cum
+                officia natus enim nesciunt fugit ipsum nobis harum voluptatem cupiditate quod.</p>
+            <div class="row-promo">
+                <div class="col-promo">
+                    <iframe class="video-fluid" width="576" height="315"
+                        src="https://www.youtube.com/embed/_hUnTWiVWPM?si=FPW8Vh1mBJq17VzQ" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+            </div>
+        </div>
+        <section>
+
+            <section class="formulariocliente padding-xl margin-top">
+                <div class="container">
+                    <h2>Formulario de contacto</h2>
+                    <div class="row">
+                        <div class="col col-60 padding-small formulario-row">
+                            <form action="registro.php" method="post">
+                                <div class="row">
+                                    <div class="col col-50">
+                                        <input class="form-control" type="text" id="nombre" name="nombre"
+                                            placeholder="Nombre" required>
+                                    </div>
+                                    <div class="col col-50">
+                                        <input class="form-control" type="email" id="correo" name="correo"
+                                            placeholder="Correo electrónico" required>
+
+                                    </div>
+                                    <div class="col col-50">
+                                        <input class="form-control" type="tel" id="telefono" name="telefono"
+                                            placeholder="Teléfono" required>
+
+                                    </div>
+                                    <div class="col col-50">
+                                        <input class="form-control" type="text" id="asunto" name="asunto"
+                                            placeholder="Asunto" required>
+
+                                    </div>
+                                    <div class="col col-100">
+                                        <textarea class="form-control form-noresize" name="mensaje" id="mensaje"
+                                            required placeholder="Dejanos tu mensaje" cols="50" rows="5"></textarea>
+                                    </div>
+                                    <div class="col col-100">
+                                        <input class="form-control" type="text" id="captcha" name="captcha"
+                                            placeholder="Confirmación" required>
+
+                                    </div>
+                                    <div class="col col-100">
+                                        <input type="checkbox" name="politicas" id="politicas">
+                                        <label for="politicas">He leido y estoy de acuerdo con los <a class="form-link"
+                                                href="https://www.utp.edu.pe/web/politicas-privacidad"
+                                                target="_blank">terminos y condiciones</a>
+                                            de privacidad acerca del tratamiento de mis datos personales.
+                                        </label>
+                                    </div>
+                                    <div class="col col-100">
+                                        <button class="form-submit" type="submit">Enviar mensaje <i
+                                                class="fa-solid fa-paper-plane"></i></button>
+
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="col col-40 padding-small tf2-form-imag">
+                            <img class="img-fluid" src="assets/img/contact.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+
+    <footer id="contact" class="main-footer">
+        <section class="LastSectionColor">
+            <div class="containerFooter">
+                <div class="row2">
+                    <!-- About MEDICO -->
+                    <div class="col2">
+                        <div>
+                            <h2 class="h2-MatchSectionForm">Nosotros</h2>
+                        </div>
+                        <div>
+                            <h3 class="h3LastSection">_____________</h3>
+                        </div>
+                        <div>
+                            <p class="p-MatchSectionForm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                                quod voluptas itaque corporis possimus fugiat porro, explicabo
+                                at vitae labore!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Useful Links -->
+                    <div class="col2">
+                        <div>
+                            <h2 class="h2-MatchSectionForm">Enlaces</h2>
+                        </div>
+                        <div>
+                            <h3 class="h3LastSection">_____________</h3>
+                        </div>
+                        <div class="nav-menuLastSection">
+                            <a class="nav-menuLastSection-link" href="#">Servicios</a>
+                            <a class="nav-menuLastSection-link" href="#">Términos y condiciones</a>
+                            <a class="nav-menuLastSection-link" href="#">Privacidad</a>
+                            <a class="nav-menuLastSection-link" href="#">Testimonios</a>
+                        </div>
+                    </div>
+                    <!-- Subscribe -->
+                    <div class="col2">
+                        <div>
+                            <h2 class="h2-MatchSectionForm">Suscríbete</h2>
+                        </div>
+                        <div>
+                            <h3 class="h3LastSection">_____________</h3>
+                        </div>
+                        <div class="row2">
+                            <form action="">
+                                <input class="formularioEmail" type="email" name="email"
+                                    placeholder="Correo electrónico" />
+                                <input class="formularioSubscribe" type="submit" value="Subscribe" />
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Opening hours -->
+                    <div class="col2">
+                        <div class="divMarginLastSection">
+                            <h2 class="h2-MatchSectionForm">Horarios</h2>
+                        </div>
+                        <div>
+                            <h3 class="h3LastSection">_____________</h3>
+                        </div>
+                        <div>
+                            <!-- cajita y hora -->
+                            <!-- cajita -->
+                            <div class="row2 horariosDiv">
+                                <div class="col-50 reloj-basis">
+                                    <img class="img-fluid2 imgHourMaxWidth" src="assets/img/relojfooter.png" alt="" />
+                                </div>
+                                <div class="col-50 horarios-dias">
+                                    <p class="p-Dias">Lun. - Sáb.</p>
+                                    <p class="p-MatchSectionForm">8:00AM - 8:00PM</p>
+                                </div>
+                            </div>
+                            <!-- cajita y hora -->
+                            <!-- cajita -->
+                            <div class="row2 horariosDiv">
+                                <div class="col-50 reloj-basis">
+                                    <img class="img-fluid2 imgHourMaxWidth" src="assets/img/relojfooter.png" alt="" />
+                                </div>
+                                <div class="col-50 horarios-dias">
+                                    <p class="p-Dias">Dom. - Festivos</p>
+                                    <p class="p-MatchSectionForm">10:00AM - 5:00PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer padding-small">
+            <div class="containerFooter row2">
+                <div class="Derechos">
+                    &copy; 2025 Acupuntura y Terapias Holísticas - Todos los derechos reservados
+                </div>
+                <div class="nav-menuFooter">
+                    <a class="button-footer" href="">INICIO</a>
+                    <a class="button-footer" href="">SOBRE NOSOTROS</a>
+                    <a class="button-footer" href="">CONTACTO</a>
+                </div>
+                <ul>
+                    <li>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-up">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <!-- Enlazar el HTML con la libreria principal de javascript -->
+     <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1495 @@
+/* ========= VARIABLES CSS Y FUENTES LOCALES ========= */
+:root {
+  /* ... tus variables existentes ... */
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --dark-color: #2c3e50;
+  --text-color: #555;
+  --background-light-blue: #f4f7f9;
+  --white-color: #ffffff;
+  --footer-bg: #212f3d;
+  --font-family: "Poppins", sans-serif;
+
+  --color1: #d8eefd;
+  --color2: #475c6a;
+  --color3: #00ecff;
+  --color4: #ffffff;
+  --color5: #1c99d4;
+
+  --color1pro: var(--footer-bg);
+  /* Fondo principal del footer */
+  --color2pro: var(--primary-color);
+  /* Color principal para botones */
+  --color3pro: var(--secondary-color);
+  /* Color para hovers (pasar el ratón) */
+  --color5pro: var(--secondary-color);
+  /* Color alternativo para hovers */
+}
+
+/* ========= ESTILOS GLOBALES Y RESETEO ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+  background: var(--white-color);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--dark-color);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========= CLASES DE UTILIDAD ========= */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--white-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ========= HEADER / NAVEGACIÓN ========= */
+.main-header {
+  background: rgba(44, 62, 80, 0.85);
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  /* Una sombra sutil para darle separación */
+  transition: background-color 0.3s ease;
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  display: none;
+  color: var(--color1);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: var(--white-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+.main-nav-active {
+  color: var(--primary-color) !important;
+}
+
+/* ========= SECCIÓN HERO (MODIFICADA PARA VIDEO) ========= */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white-color);
+  position: relative;
+  /* Contenedor para el video y el contenido */
+  overflow: hidden;
+  /* Oculta partes del video que se salgan */
+}
+
+/* Estilos para el video de fondo */
+#hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  /* Detrás de todo el contenido */
+}
+
+/* Capa oscura sobre el video para que el texto sea legible */
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 62, 80, 0.7);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  /* Asegura que el contenido esté sobre la capa oscura */
+  z-index: 3;
+  padding-top: 70px;
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+  color: var(--white-color);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--white-color);
+  /* <-- CAMBIA ESTA LÍNEA (de --primary-color a --white-color) */
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  /* <-- AÑADE ESTA LÍNEA para poner el texto celeste */
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+/* ========= INFO BAR ========= */
+#info-bar {
+  background: var(--primary-color);
+  padding: 1.5rem 0;
+  position: relative;
+  z-index: 10;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+/* Estilos para que el enlace se comporte como un botón */
+.info-box a {
+  display: flex;
+  /* <-- AÑADIDO: Para centrar todo verticalmente */
+  flex-direction: column;
+  /* <-- AÑADIDO: Pone el icono arriba y el texto abajo */
+  align-items: center;
+  /* <-- AÑADIDO: Centra horizontalmente */
+  justify-content: center;
+  /* <-- AÑADIDO: Centra verticalmente */
+  padding: 20px 10px;
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.info-box a:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+.info-box img {
+  height: 45px;
+  margin-bottom: 0.8rem;
+  filter: brightness(0) invert(1);
+}
+
+.info-box i {
+  font-size: 45px;
+  /* Le damos el mismo tamaño que la altura de la imagen */
+  margin-bottom: 0.8rem;
+}
+
+.info-box h3 {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ========= SECCIÓN ACERCA DE NOSOTROS (CORREGIDO) ========= */
+#about-us {
+  background-color: var(--white-color);
+  padding: 80px 0;
+}
+
+/* 1. CREAMOS LA REJILLA DE DOS COLUMNAS */
+.about-us-grid {
+  display: grid;
+  /* La primera columna (texto) toma el espacio sobrante, la segunda (video) tiene un ancho fijo */
+  grid-template-columns: 0.5fr 300px;
+  gap: 60px;
+  /* Espacio entre el texto y el video */
+  align-items: center;
+  /* Centra verticalmente ambos elementos */
+  justify-content: center;
+  margin: auto 0;
+}
+
+/* 2. AJUSTAMOS EL TÍTULO Y EL TEXTO PARA QUE SE ALINEEN A LA IZQUIERDA */
+.about-us-grid .section-title {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.about-us-grid .section-title::after {
+  margin: 15px 0 0 0;
+}
+
+#about-us .section-title p {
+  max-width: 700px;
+  margin: 15px 0 0 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.video-container {
+  max-width: 380px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(44, 62, 80, 0.15);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.promo-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========= SECCIÓN ESPECIALISTA ========= */
+#especialista {
+  background-color: var(--background-light-blue);
+  /* Un fondo suave para diferenciar la sección */
+  padding: 80px 0;
+}
+
+.especialista-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  /* Dos columnas de igual tamaño */
+  gap: 60px;
+  /* Espacio entre la imagen y el texto */
+  align-items: center;
+  /* Centra verticalmente el contenido de ambas columnas */
+}
+
+.especialista-imagen img {
+  width: 100%;
+  /* La imagen ocupa todo el ancho de su columna */
+  max-width: 500px;
+  /* Un tamaño máximo para que no sea excesivamente grande en pantallas anchas */
+  height: auto;
+  /* Mantiene la proporción original */
+  border-radius: 15px;
+  /* Bordes redondeados para un look más suave */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil para darle profundidad */
+  display: block;
+  /* Elimina espacios indeseados debajo de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen si la columna es más ancha que el max-width */
+}
+
+.especialista-info h2 {
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Línea decorativa debajo del título "Conoce a nuestra especialista" */
+.especialista-info h2::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.especialista-info p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  /* Espacio antes del botón */
+}
+
+
+
+.service {
+  background-color: var(--color1);
+  color: var(--color2);
+}
+
+.padding-xl {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-left: -10px;
+  margin-right: -10px;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.col {
+  /* Establecen el mismo ancho para cada caja, en una misma fila */
+  flex-grow: 1;
+  flex-basis: 0;
+
+  /* Espacio entre columnas  */
+  padding-left: 15px;
+  padding-right: 15px;
+
+  /* Evita que se modifique el tamaño de la caja flexible */
+  box-sizing: border-box;
+}
+
+.col-60 {
+  max-width: 60%;
+  flex-basis: 60%;
+}
+
+.col-40 {
+  max-width: 40%;
+  flex-basis: 40%;
+}
+
+.col-30 {
+  max-width: 30%;
+  flex-basis: 30%;
+}
+
+.col-33 {
+  max-width: 33.33%;
+  flex-basis: 33.33%;
+}
+
+.col-66 {
+  max-width: 66.67%;
+  flex-basis: 66.67%;
+}
+
+.col-50 {
+  max-width: 50%;
+  flex-basis: 50%;
+}
+
+.col-100 {
+  max-width: 100%;
+  flex-basis: 100%;
+}
+
+.padding-small {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.video-fluid {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+}
+
+.button-service {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--color3);
+  color: var(--color4);
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.4s ease-in-out;
+  font-size: 24px;
+  box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+}
+
+.button-service:hover {
+  background-color: var(--color5);
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.service-box {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.button-wrapper {
+  margin-top: 50px;
+}
+
+
+.div2 {
+  background-color: rgb(216, 238, 253);
+}
+
+.titlePaciente {
+  color: rgb(32, 54, 70);
+  font-family: Verdana;
+}
+
+.padding-30 {
+  padding: 30px;
+}
+
+.centrar_texto {
+  text-align: center;
+}
+
+.centrar_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  /* Le damos un ancho fijo */
+  height: 180px;
+  /* Y un alto fijo para que sea un círculo perfecto */
+  object-fit: cover;
+  /* ¡MUY IMPORTANTE! Evita que la foto se deforme */
+
+  border: 4px solid rgb(216, 238, 253);
+  /* Forma más corta de escribir el borde */
+  border-radius: 100%;
+  margin-bottom: 20px;
+  /* Espacio entre la foto y el nombre */
+}
+
+/* Selectores para tabla */
+.tarifas {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+
+.tbl-tarifa {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tbl-tarifa caption {
+  margin-bottom: 13px;
+  margin-top: 13px;
+}
+
+.tbl-tarifa th,
+.tbl-tarifa td {
+  border: 1px solid var(--color2);
+  padding: 15px;
+  text-align: center;
+}
+
+.tbl-tarifa caption {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.tbl-tarifa tbody,
+.tbl-tarifa {
+  background-color: var(--color4);
+  color: var(--text-color);
+}
+
+.tbl-tarifa thead {
+  background-color: var(--color2);
+  color: var(--color4);
+}
+
+.tbl-tarifa tfoot td {
+  font-style: italic;
+  text-align: right;
+}
+
+.nombrePaciente {
+  color: rgb(59, 169, 243);
+  font-family: Verdana;
+  font-size: 20px;
+  text-align: center;
+}
+
+.info_Paciente {
+  color: rgb(71, 92, 106);
+  font-family: Verdana;
+  font-size: 14px;
+  text-align: center;
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centrarText {
+  text-align: center;
+  color: rgb(19, 39, 53);
+  font-size: 20px;
+}
+
+.margin-bottom-25px {
+  margin-bottom: 25px;
+}
+
+.padding-bottom-30px {
+  padding-bottom: 30px;
+}
+
+.padding-bottom-10px {
+  padding-bottom: 10px;
+}
+
+
+/* PARTE proyecto */
+.containerFooter {
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.row2 {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+}
+
+.img-fluid2 {
+  width: 100%;
+  max-width: 50px;
+  height: auto;
+}
+
+.p-MatchSectionForm {
+  font-size: 13.5px;
+}
+
+.p-Dias {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 5px;
+  margin-top: 8px;
+}
+
+.h2-MatchSectionForm {
+  font-size: 18px;
+  margin-bottom: 1px;
+  padding-top: 0px;
+  color: var(--white-color);
+}
+
+.LastSectionColor {
+  background-color: var(--color1pro);
+  color: whitesmoke;
+}
+
+.h3LastSection {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 10px;
+  font-size: 8px;
+  color: var(--white-color);
+}
+
+.col2 {
+  /* establecen el mismo ancho para cada caja en una misma fila*/
+  flex-grow: 1;
+  /* cada columna ocupa el mismo espacio */
+  flex-basis: 0;
+  /* espacio entre columnas */
+  padding-left: 15px;
+  padding-right: 15px;
+  /* evite que se modifique el tamaño de la caja flexible */
+  box-sizing: border-box;
+  /* incluye padding y border en el ancho total */
+}
+
+.imgHourMaxWidth {
+  width: 80px;
+  height: auto;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.divMarginLastSection {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.nav-menuLastSection {
+  display: flex;
+  /* orden horizontan del flex */
+  flex-direction: column;
+  /* espacio entre opciones */
+  /* gap: 18px; */
+  /* justifica y alinea a la izquierda o derecha flex start iz flex end derecha y
+tmb center*/
+  justify-content: flex-start;
+}
+
+.nav-menuLastSection-link {
+  font-size: 13.5px;
+  color: var(--);
+  text-decoration: none;
+  /* quita el subrayado */
+  display: block;
+  /* convierte en caja y lo hace clickeable */
+  padding: 5px 0px;
+  /* espacio interno arriba y abajo 5px y 15px izquierda y derecha
+*/
+  transition: all 0.2s ease-in-out;
+  /* efecto de transición suave */
+}
+
+.nav-menuLastSection-link:hover {
+  color: var(--color3pro);
+}
+
+.max-width-100 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* elimina espacio blanco debajo de la imagen */
+}
+
+.formularioEmail {
+  background-color: var(--color1pro);
+  color: whitesmoke;
+  border: lightgray 1px solid;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.formularioEmail:focus {
+  outline: none;
+  border: 1px solid var(--color3pro);
+  box-shadow: 0 0 5px var(--color3pro);
+}
+
+.formularioSubscribe {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color2pro);
+  /* verde claro */
+  color: var(--color1pro);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.formularioSubscribe:hover {
+  background-color: var(--color5pro);
+  /* verde oscuro */
+  color: var(--color2pro);
+  transition: all 0.35s ease-in-out;
+}
+
+.footer {
+  background-color: var(--color1pro);
+  color: var(--color2);
+  margin-top: 0.5px;
+  font-size: 13px;
+  padding: 5px 0px;
+}
+
+.Derechos {
+  text-align: left;
+  color: var(--color2pro);
+}
+
+.nav-menuFooter {
+  display: flex;
+  /* orden horizontan del flex */
+  flex-direction: row;
+  gap: 15px;
+  /* justifica y alinea a la izquierda o derecha flex start iz flex end derecha y
+tmb center*/
+  justify-content: center;
+  margin-left: auto;
+}
+
+.button-footer {
+  color: whitesmoke;
+  text-decoration: none;
+  /* quita el subrayado */
+  display: block;
+  /* convierte en caja y lo hace clickeable */
+  padding: 5px 15px;
+  /* espacio interno arriba y abajo 5px y 15px izquierda y
+derecha */
+  transition: all 0.2s ease-in-out;
+  /* efecto de transición suave */
+  border-radius: 5px;
+  /* bordes redondeados */
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.button-footer:hover {
+  color: var(--color3pro);
+}
+
+/*css formulario*/
+
+.form-control {
+  display: block;
+  /*Convertir objeto en un caja*/
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 5px;
+  font: inherit;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color1);
+  transition: all 0.1s ease-in-out;
+}
+
+.form-control:focus {
+  border-bottom: 1px solid var(--color3);
+}
+
+.form-link {
+  text-decoration: none;
+  color: var(--color5);
+}
+
+.form-submit {
+  background-color: var(--color1);
+  color: var(--color2);
+  padding: 10px 20px;
+  font: inherit;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0px 5px 34px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease-in-out;
+}
+
+.form-submit:hover {
+  background-color: var(--color3);
+}
+
+.form-noresize {
+  resize: none;
+}
+
+.page-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--color4);
+}
+
+.page-subTitle {
+  font-size: 15px;
+  color: var(--color4);
+}
+
+.div-img {
+  min-height: 250px;
+}
+
+.page-title-img {
+  padding-top: 100px;
+  background: linear-gradient(90deg,
+      rgba(52, 72, 86, 1) 0%,
+      rgba(32, 54, 70, 0.6) 50%),
+    url(../img/page_title.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color2);
+}
+
+.bar-top {
+  background-color: var(--color5);
+  color: var(--color4);
+}
+
+.bar-top a {
+  font-family: var(--font-family);
+}
+
+.contacs a {
+  color: var(--color4);
+  font-family: var(--font-family);
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.contacs a:hover {
+  color: var(--color2);
+}
+
+.bartop-conc-red {
+  justify-content: space-between;
+}
+
+.Redes a {
+  color: var(--color4);
+  transition: all 0.5s ease-in-out;
+  margin: 1px;
+}
+
+.Redes a:hover {
+  color: var(--color2);
+}
+
+.container-videopromo {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.video-promocional {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+
+.row-promo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col-promo {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.margin-bottom-55px {
+  margin-bottom: 55px;
+}
+
+.margin-top {
+  margin: 80px;
+}
+
+.scroll-up {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  /*200px 200px 200px 200px */
+
+  /* Posicionamiento fijo */
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 15px 20px 0 rgba(32, 54, 70, 0.4);
+  z-index: 10;
+}
+
+.scroll-up:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  transform: scale(1.3) translateY(0px);
+}
+
+.reloj-basis {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.slide-in-left {
+  -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-10-9 9:54:7
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Ajustes responsive para pantallas tablet (hasta 768px) */
+@media screen and (max-width: 768px) {
+
+  /* 1. EL MENÚ: Posicionamiento absoluto real para que ignore el padding del container */
+  .main-nav {
+    position: absolute;
+    right: 0; /* Pegado al borde derecho del header */
+    top: 100%;
+    width: 250px;
+    background-color: var(--color4);
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Se activa con .show */
+    z-index: 1000;
+  }
+
+  /* 2. LIMPIEZA: Quitamos las reglas flex que estorbaban */
+  .main-header .main-nav {
+    order: unset; /* IMPORTANTE: Quitamos el order 4 */
+    flex-basis: auto; /* IMPORTANTE: Quitamos el 100% */
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .main-nav.show {
+    display: block !important;
+  }
+
+  /* Estilos internos del menú (Lista vertical) */
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-nav a {
+    color: var(--dark-color);
+    display: block;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color1);
+    font-size: 14px !important;
+  }
+
+  .main-nav a.main-nav-active {
+    background-color: var(--color1);
+    color: var(--primary-color) !important;
+  }
+
+  /* Ajustes de los elementos del Header para que no se amontonen */
+  .main-header .container {
+    flex-wrap: nowrap; /* Evita que el logo o botón salten de línea */
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  .main-header .btn {
+    order: 2;
+    margin: 0 10px;
+    padding: 8px 15px; /* Botón un poco más pequeño en tablet */
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  /* El resto de tus estilos (Hero, Especialista, etc.) se mantienen igual */
+  .hero-content h1 { font-size: 50px; }
+  #about-us { padding-top: 20px; }
+  .service h3 { font-size: 19px; }
+  .padding-xl { padding-top: 30px; padding-bottom: 30px; }
+  
+  .form-control .col, .formulario-row {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .tf2-form-imag, .reloj-basis { display: none; }
+  .horarios-dias { flex-basis: 100% !important; }
+}
+
+
+/* Media Query para móviles (hasta 576px) */
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    /* Anula la regla de 'max-width: 90%' en móviles */
+  }
+
+  /* ===== AJUSTES GLOBALES Y SECCIONES ===== */
+  .section-padding {
+    padding: 40px 0;
+    /* Reduce el espaciado vertical en todas las secciones */
+  }
+
+  .margin-top {
+    margin-top: 40px;
+    /* Reduce el margen superior del formulario */
+    margin-bottom: 40px;
+  }
+
+  /* ===== HEADER / NAVEGACIÓN ===== */
+  .main-header .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .main-nav {
+    right: 0;
+  }
+
+  /* 2. Reglas de orden */
+  .menu-toggle {
+    order: 3;
+    /* Hamburguesa a la izquierda */
+  }
+
+  .main-header .btn {
+    order: 2;
+    /* Botón AGENDAR al centro */
+    margin: 0;
+    /* Quitamos márgenes por si acaso */
+  }
+
+  .logo {
+    order: 1;
+    /* Logo a la derecha */
+  }
+
+  /* 4. Menú desplegable (para que se vaya abajo) */
+
+  .main-header .main-nav ul {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  /* ===== SECCIÓN HERO (VIDEO) ===== */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    max-width: 400px;
+  }
+
+  /* ===== BARRA DE INFORMACIÓN (DEBAJO DEL HERO) ===== */
+  #info-bar {
+    width: 80%;
+    transform: translateY(-50%);
+  }
+
+  .info-box i {
+    font-size: 30px;
+  }
+
+  .info-box h3 {
+    font-size: 1rem;
+  }
+
+  /* ===== SECCIÓN "ACERCA DE NOSOTROS" ===== */
+  .about-us-grid {
+    grid-template-columns: 1fr;
+    /* Apila el texto y el video */
+    gap: 30px;
+  }
+
+  .video-container {
+    max-width: 100%;
+  }
+
+  /* ===== SECCIÓN DE SERVICIOS ===== */
+  .service .row .col {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  /* ===== SECCIÓN "CONOCE A NUESTRA TERAPISTA" ===== */
+  .especialista-info h2 {
+    font-size: 2rem;
+  }
+
+  .especialista-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* ===== VIDEO PROMOCIONAL DE YOUTUBE ===== */
+  .container-videopromo {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .col-promo {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  /* ===== FORMULARIO DE CONTACTO ===== */
+  .formulariocliente .col {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  /* ======================================= */
+  /* ========= FOOTER (PIE DE PÁGINA) ========= */
+  /* ======================================= */
+
+  /* Contenedor principal de las 4 secciones del footer */
+  .LastSectionColor .row2 {
+    gap: 0;
+    /* Anula el 'gap' para que las columnas del 50% encajen */
+  }
+
+  /* Cada una de las 4 secciones (Sobre, Enlaces, Suscríbete, Horarios) */
+  .LastSectionColor .col2 {
+    flex-basis: 50%;
+    max-width: 50%;
+    margin-bottom: 30px;
+    /* Espacio vertical entre filas */
+  }
+
+  /* Filas de los horarios DENTRO de la sección "Horarios" */
+  .LastSectionColor .col2 .row2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Párrafos dentro de la sección "Horarios" */
+  .LastSectionColor .p-Dias,
+  .LastSectionColor .p-MatchSectionForm {
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  /* Formulario de suscripción en el footer */
+  .formularioEmail,
+  .formularioSubscribe {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    /* O la altura de tu header + barra superior */
+    right: 0;
+    width: 33%;
+    /* O el ancho que prefieras */
+    background-color: var(--color4);
+    box-shadow: 0 4px 10px var(--color2);
+
+    /* ¡LA PIEZA CLAVE QUE FALTABA! */
+    display: none;
+  }
+
+  /* 2. Haz que la lista <ul> se apile verticalmente */
+  .main-nav ul {
+    flex-direction: column;
+    /* Apila los enlaces */
+    gap: 0;
+    /* Quita el espaciado de escritorio */
+    width: 100%;
+  }
+
+  /* 3. ¡El paso más importante! Cambia el color de los enlaces */
+  .main-nav a {
+    color: var(--dark-color);
+    /* ¡Color de texto oscuro! */
+    display: block;
+    /* Hace que el enlace ocupe todo el ancho */
+    padding: 12px 15px;
+    /* Añade espaciado interno */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    border-bottom: 1px solid var(--color1);
+    /* Línea separadora */
+    font-size: 14px !important;
+    /* Asegura el tamaño de fuente */
+  }
+
+  /* 4. Estilo para el enlace activo */
+  .main-nav a.main-nav-active {
+    color: var(--primary-color) !important;
+    /* Color de acento para el activo */
+    background-color: var(--color1);
+  }
+
+  /* 5. Estilo opcional para :hover */
+  .main-nav a:hover {
+    background-color: var(--color1);
+    color: var(--primary-color);
+  }
+
+  /*Muestra menu. Se ejecutara desde Javascript*/
+  .main-nav.show {
+    display: block;
+  }
+
+  /* ===== AJUSTES GLOBALES ===== */
+  h2 {
+    font-size: 1.8rem;
+    /* Reduce el tamaño de todos los H2 en móvil */
+  }
+
+  /* ===== BARRA SUPERIOR (TELÉFONO Y REDES) ===== */
+  .bar-top .contacs a {
+    font-size: 9px;
+  }
+
+  /* ===== HEADER / NAVEGACIÓN ===== */
+  .main-header .main-nav a {
+    font-size: 12px;
+    /* Hacemos la letra del menú más pequeña para que no se amontone */
+  }
+
+  /* ===== BARRA DE INFORMACIÓN (DEBAJO DEL HERO) ===== */
+  .info-bar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-box a {
+    padding: 15px 5px;
+    /* Reducimos el padding para ganar espacio */
+  }
+
+  .info-box i {
+    font-size: 22px;
+    /* Hacemos los iconos más pequeños */
+    margin-bottom: 0.5rem;
+  }
+
+  .info-box h3 {
+    font-size: 0.75rem;
+    /* Hacemos el texto más pequeño */
+  }
+
+  /* ===== SECCIÓN DE TARIFAS (TABLA) ===== */
+  .table-container {
+    overflow-x: auto;
+    /* Permite el scroll horizontal solo en la tabla */
+    padding-bottom: 10px;
+  }
+
+  /* ===== FOOTER (PIE DE PÁGINA) ===== */
+  .nav-menuFooter {
+    gap: 0px;
+  }
+
+  .button-footer {
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 13px;
+  }
+}
