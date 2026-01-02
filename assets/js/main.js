@@ -8,3 +8,15 @@ var menuToggle = document.querySelector(".menu-toggle");
 menuToggle.onclick = () => {
     navMenu.classList.toggle("show");
 }
+
+let imagenes = [
+    {
+        "url":"assets/img/jesus-gomez.png",
+        "nombre": "img1"
+    },
+    {
+        "url": "assets/img/ingrid-maria.png",
+        "nombre": "img2"
+    }
+]
+

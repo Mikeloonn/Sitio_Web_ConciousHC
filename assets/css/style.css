@@ -1,29 +1,14 @@
 /* ========= VARIABLES CSS Y FUENTES LOCALES ========= */
 :root {
   /* ... tus variables existentes ... */
-  --primary-color: #3498db;
-  --secondary-color: #2980b9;
-  --dark-color: #2c3e50;
-  --text-color: #555;
-  --background-light-blue: #f4f7f9;
-  --white-color: #ffffff;
-  --footer-bg: #212f3d;
+  --colora0: #C5AC96;
+  --colora3: #3D362F;
+  --colora4: #90806F;
+  --colora6: #555;
+  --colora1: #f4f7f9;
+  --colora2: #ffffff;
+  --colora5: #28241F;
   --font-family: "Poppins", sans-serif;
-
-  --color1: #d8eefd;
-  --color2: #475c6a;
-  --color3: #00ecff;
-  --color4: #ffffff;
-  --color5: #1c99d4;
-
-  --color1pro: var(--footer-bg);
-  /* Fondo principal del footer */
-  --color2pro: var(--primary-color);
-  /* Color principal para botones */
-  --color3pro: var(--secondary-color);
-  /* Color para hovers (pasar el ratón) */
-  --color5pro: var(--secondary-color);
-  /* Color alternativo para hovers */
 }
 
 /* ========= ESTILOS GLOBALES Y RESETEO ========= */
@@ -39,9 +24,9 @@ html {
 
 body {
   font-family: var(--font-family);
-  color: var(--text-color);
+  color: var(--colora6);
   line-height: 1.6;
-  background: var(--white-color);
+  background: var(--colora2);
 }
 
 .container {
@@ -54,7 +39,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--dark-color);
+  color: var(--colora5);
   line-height: 1.2;
 }
 
@@ -76,7 +61,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--colora3);
 }
 
 ul {
@@ -93,7 +78,7 @@ img {
   display: inline-block;
   padding: 10px 25px;
   border-radius: 5px;
-  color: var(--white-color);
+  color: var(--colora2);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -103,21 +88,21 @@ img {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: var(--colora3);
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--colora4);
 }
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid var(--white-color);
+  border: 2px solid var(--colora2);
 }
 
 .btn-secondary:hover {
-  background-color: var(--white-color);
-  color: var(--primary-color);
+  background-color: var(--colora2);
+  color: var(--colora3);
 }
 
 .section-padding {
@@ -139,7 +124,7 @@ img {
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--primary-color);
+  background: var(--colora3);
   margin: 10px auto 0;
   border-radius: 5px;
 }
@@ -151,7 +136,7 @@ img {
 
 /* ========= HEADER / NAVEGACIÓN ========= */
 .main-header {
-  background: rgba(44, 62, 80, 0.85);
+  background: rgba(82, 74, 65, 0.85);
   padding: 5px 0;
   position: sticky;
   top: 0;
@@ -165,7 +150,7 @@ img {
 .menu-toggle {
   font-size: 2rem;
   display: none;
-  color: var(--color1);
+  color: var(--colora1);
 }
 
 .main-header .container {
@@ -190,7 +175,7 @@ img {
 }
 
 .main-nav a {
-  color: var(--white-color);
+  color: var(--colora2);
   font-weight: 500;
   transition: color 0.3s ease;
   text-transform: uppercase;
@@ -198,11 +183,11 @@ img {
 }
 
 .main-nav a:hover {
-  color: var(--primary-color);
+  color: var(--colora3);
 }
 
 .main-nav-active {
-  color: var(--primary-color) !important;
+  color: var(--colora3) !important;
 }
 
 /* ========= SECCIÓN HERO (MODIFICADA PARA VIDEO) ========= */
@@ -212,7 +197,7 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--white-color);
+  color: var(--colora2);
   position: relative;
   /* Contenedor para el video y el contenido */
   overflow: hidden;
@@ -255,21 +240,21 @@ img {
 .hero-content h1,
 .hero-content h2,
 .hero-content p {
-  color: var(--white-color);
+  color: var(--colora2);
 }
 
 .hero-content h1 {
   font-size: 4rem;
   font-weight: 700;
-  color: var(--white-color);
-  /* <-- CAMBIA ESTA LÍNEA (de --primary-color a --white-color) */
+  color: var(--colora2);
+  /* <-- CAMBIA ESTA LÍNEA (de --colora3 a --colora2) */
 }
 
 .hero-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--colora0);
   /* <-- AÑADE ESTA LÍNEA para poner el texto celeste */
 }
 
@@ -280,7 +265,7 @@ img {
 
 /* ========= INFO BAR ========= */
 #info-bar {
-  background: var(--primary-color);
+  background: var(--colora3);
   padding: 1.5rem 0;
   position: relative;
   z-index: 10;
@@ -310,14 +295,14 @@ img {
   justify-content: center;
   /* <-- AÑADIDO: Centra verticalmente */
   padding: 20px 10px;
-  color: var(--white-color);
+  color: var(--colora2);
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .info-box a:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--colora4);
   transform: translateY(-5px);
 }
 
@@ -334,7 +319,7 @@ img {
 }
 
 .info-box h3 {
-  color: var(--white-color);
+  color: var(--colora2);
   font-size: 1.1rem;
   font-weight: 500;
   margin: 0;
@@ -342,7 +327,7 @@ img {
 
 /* ========= SECCIÓN ACERCA DE NOSOTROS (CORREGIDO) ========= */
 #about-us {
-  background-color: var(--white-color);
+  background-color: var(--colora2);
   padding: 80px 0;
 }
 
@@ -373,7 +358,7 @@ img {
   max-width: 700px;
   margin: 15px 0 0 0;
   font-size: 1.1rem;
-  color: var(--text-color);
+  color: var(--colora6);
 }
 
 .video-container {
@@ -391,9 +376,51 @@ img {
   display: block;
 }
 
+/* ========= SECCIÓN TESTIMONIOS ========= */
+#testimonials {
+  background-color: #ffffff;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.imagenes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.puntos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.puntos p {
+  font: 100px;
+  font-weight: 500;
+  margint-top: -50px;
+  color: black;
+}
+
+.puntos .bold {
+  font-weight: 700;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(237, 187, 131);
+}
+
+
 /* ========= SECCIÓN ESPECIALISTA ========= */
 #especialista {
-  background-color: var(--background-light-blue);
+  background-color: var(--colora1);
   /* Un fondo suave para diferenciar la sección */
   padding: 80px 0;
 }
@@ -427,7 +454,7 @@ img {
 
 .especialista-info h2 {
   font-size: 2.5rem;
-  color: var(--dark-color);
+  color: var(--colora5);
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
@@ -439,7 +466,7 @@ img {
   display: block;
   width: 80%;
   height: 4px;
-  background-color: var(--primary-color);
+  background-color: var(--colora3);
   border-radius: 2px;
   position: absolute;
   left: 0;
@@ -449,7 +476,7 @@ img {
 .especialista-info p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--text-color);
+  color: var(--colora6);
   margin-bottom: 25px;
   /* Espacio antes del botón */
 }
@@ -457,8 +484,8 @@ img {
 
 
 .service {
-  background-color: var(--color1);
-  color: var(--color2);
+  background-color: var(--colora1);
+  color: var(--colora6);
 }
 
 .padding-xl {
@@ -550,8 +577,8 @@ img {
 .button-service {
   display: inline-block;
   padding: 12px 30px;
-  background-color: var(--color3);
-  color: var(--color4);
+  background-color: var(--colora3);
+  color: var(--colora2);
   text-decoration: none;
   margin-top: 10px;
   transition: all 0.4s ease-in-out;
@@ -562,7 +589,7 @@ img {
 }
 
 .button-service:hover {
-  background-color: var(--color5);
+  background-color: var(--colora3);
 }
 
 .img-fluid {
@@ -624,8 +651,8 @@ img {
 
 /* Selectores para tabla */
 .tarifas {
-  background-color: var(--color1);
-  color: var(--color4);
+  background-color: var(--colora1);
+  color: var(--colora2);
 }
 
 .tbl-tarifa {
@@ -640,7 +667,7 @@ img {
 
 .tbl-tarifa th,
 .tbl-tarifa td {
-  border: 1px solid var(--color2);
+  border: 1px solid var(--colora6);
   padding: 15px;
   text-align: center;
 }
@@ -653,13 +680,13 @@ img {
 
 .tbl-tarifa tbody,
 .tbl-tarifa {
-  background-color: var(--color4);
-  color: var(--text-color);
+  background-color: var(--colora2);
+  color: var(--colora6);
 }
 
 .tbl-tarifa thead {
-  background-color: var(--color2);
-  color: var(--color4);
+  background-color: var(--colora6);
+  color: var(--colora2);
 }
 
 .tbl-tarifa tfoot td {
@@ -739,11 +766,11 @@ img {
   font-size: 18px;
   margin-bottom: 1px;
   padding-top: 0px;
-  color: var(--white-color);
+  color: var(--colora2);
 }
 
 .LastSectionColor {
-  background-color: var(--color1pro);
+  background-color: var(--colora5);
   color: whitesmoke;
 }
 
@@ -752,7 +779,7 @@ img {
   padding-top: 0;
   padding-bottom: 10px;
   font-size: 8px;
-  color: var(--white-color);
+  color: var(--colora2);
 }
 
 .col2 {
@@ -793,7 +820,7 @@ tmb center*/
 
 .nav-menuLastSection-link {
   font-size: 13.5px;
-  color: var(--);
+  color: var(--colora4);
   text-decoration: none;
   /* quita el subrayado */
   display: block;
@@ -806,7 +833,7 @@ tmb center*/
 }
 
 .nav-menuLastSection-link:hover {
-  color: var(--color3pro);
+  color: var(--colora0);
 }
 
 .max-width-100 {
@@ -817,7 +844,7 @@ tmb center*/
 }
 
 .formularioEmail {
-  background-color: var(--color1pro);
+  background-color: var(--colora5);
   color: whitesmoke;
   border: lightgray 1px solid;
   padding: 10px 20px;
@@ -829,8 +856,8 @@ tmb center*/
 
 .formularioEmail:focus {
   outline: none;
-  border: 1px solid var(--color3pro);
-  box-shadow: 0 0 5px var(--color3pro);
+  border: 1px solid var(--colora4);
+  box-shadow: 0 0 5px var(--colora4);
 }
 
 .formularioSubscribe {
@@ -839,9 +866,9 @@ tmb center*/
   padding: 12px;
   border: none;
   border-radius: 5px;
-  background-color: var(--color2pro);
+  background-color: var(--colora4);
   /* verde claro */
-  color: var(--color1pro);
+  color: var(--colora5);
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -849,15 +876,15 @@ tmb center*/
 }
 
 .formularioSubscribe:hover {
-  background-color: var(--color5pro);
+  background-color: var(--colora0);
   /* verde oscuro */
-  color: var(--color2pro);
+  color: var(--colora3);
   transition: all 0.35s ease-in-out;
 }
 
 .footer {
-  background-color: var(--color1pro);
-  color: var(--color2);
+  background-color: var(--colora5);
+  color: var(--colora6);
   margin-top: 0.5px;
   font-size: 13px;
   padding: 5px 0px;
@@ -865,7 +892,7 @@ tmb center*/
 
 .Derechos {
   text-align: left;
-  color: var(--color2pro);
+  color: var(--colora3);
 }
 
 .nav-menuFooter {
@@ -898,7 +925,7 @@ derecha */
 }
 
 .button-footer:hover {
-  color: var(--color3pro);
+  color: var(--colora4);
 }
 
 /*css formulario*/
@@ -912,22 +939,22 @@ derecha */
   font: inherit;
   border: none;
   outline: none;
-  border-bottom: 1px solid var(--color1);
+  border-bottom: 1px solid var(--colora1);
   transition: all 0.1s ease-in-out;
 }
 
 .form-control:focus {
-  border-bottom: 1px solid var(--color3);
+  border-bottom: 1px solid var(--colora3);
 }
 
 .form-link {
   text-decoration: none;
-  color: var(--color5);
+  color: var(--colora3);
 }
 
 .form-submit {
-  background-color: var(--color1);
-  color: var(--color2);
+  background-color: var(--colora1);
+  color: var(--colora6);
   padding: 10px 20px;
   font: inherit;
   margin-top: 20px;
@@ -940,7 +967,7 @@ derecha */
 }
 
 .form-submit:hover {
-  background-color: var(--color3);
+  background-color: var(--colora3);
 }
 
 .form-noresize {
@@ -950,12 +977,12 @@ derecha */
 .page-title {
   font-size: 25px;
   font-weight: bold;
-  color: var(--color4);
+  color: var(--colora2);
 }
 
 .page-subTitle {
   font-size: 15px;
-  color: var(--color4);
+  color: var(--colora2);
 }
 
 .div-img {
@@ -970,12 +997,12 @@ derecha */
     url(../img/page_title.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--color2);
+  color: var(--colora6);
 }
 
 .bar-top {
-  background-color: var(--color5);
-  color: var(--color4);
+  background-color: var(--colora3);
+  color: var(--colora2);
 }
 
 .bar-top a {
@@ -983,7 +1010,7 @@ derecha */
 }
 
 .contacs a {
-  color: var(--color4);
+  color: var(--colora2);
   font-family: var(--font-family);
   font-size: 12px;
   letter-spacing: 1.3px;
@@ -993,7 +1020,7 @@ derecha */
 }
 
 .contacs a:hover {
-  color: var(--color2);
+  color: var(--colora6);
 }
 
 .bartop-conc-red {
@@ -1001,13 +1028,21 @@ derecha */
 }
 
 .Redes a {
-  color: var(--color4);
+  color: var(--colora2);
   transition: all 0.5s ease-in-out;
   margin: 1px;
 }
 
 .Redes a:hover {
-  color: var(--color2);
+  color: var(--colora6);
+}
+
+/*Sección promociones*/
+
+#promociones {
+  background-color: var(--colora1);
+  /* El tono marrón/café oscuro solicitado */
+  /* Usamos blanco para que el texto sea legible */
 }
 
 .container-videopromo {
@@ -1016,11 +1051,6 @@ derecha */
   padding-top: 80px;
   padding-left: 5%;
   padding-right: 5%;
-}
-
-.video-promocional {
-  background-color: var(--color1);
-  color: var(--color4);
 }
 
 .row-promo {
@@ -1050,8 +1080,8 @@ derecha */
   height: 45px;
   line-height: 45px;
   text-align: center;
-  background-color: var(--dark-color);
-  color: var(--white-color);
+  background-color: var(--colora5);
+  color: var(--colora2);
   border-radius: 10px;
   border: 1px solid black;
   border-radius: 50%;
@@ -1068,8 +1098,8 @@ derecha */
 }
 
 .scroll-up:hover {
-  background-color: var(--white-color);
-  color: var(--dark-color);
+  background-color: var(--colora2);
+  color: var(--colora5);
   transform: scale(1.3) translateY(0px);
 }
 
@@ -1133,19 +1163,23 @@ derecha */
   /* 1. EL MENÚ: Posicionamiento absoluto real para que ignore el padding del container */
   .main-nav {
     position: absolute;
-    right: 0; /* Pegado al borde derecho del header */
+    right: 0;
+    /* Pegado al borde derecho del header */
     top: 100%;
     width: 250px;
-    background-color: var(--color4);
+    background-color: var(--colora2);
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
-    display: none; /* Se activa con .show */
+    display: none;
+    /* Se activa con .show */
     z-index: 1000;
   }
 
   /* 2. LIMPIEZA: Quitamos las reglas flex que estorbaban */
   .main-header .main-nav {
-    order: unset; /* IMPORTANTE: Quitamos el order 4 */
-    flex-basis: auto; /* IMPORTANTE: Quitamos el 100% */
+    order: unset;
+    /* IMPORTANTE: Quitamos el order 4 */
+    flex-basis: auto;
+    /* IMPORTANTE: Quitamos el 100% */
     margin-top: 0;
     margin-right: 0;
   }
@@ -1161,22 +1195,23 @@ derecha */
   }
 
   .main-nav a {
-    color: var(--dark-color);
+    color: var(--colora5);
     display: block;
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid var(--color1);
+    border-bottom: 1px solid var(--colora1);
     font-size: 14px !important;
   }
 
   .main-nav a.main-nav-active {
-    background-color: var(--color1);
-    color: var(--primary-color) !important;
+    background-color: var(--colora1);
+    color: var(--colora3) !important;
   }
 
   /* Ajustes de los elementos del Header para que no se amontonen */
   .main-header .container {
-    flex-wrap: nowrap; /* Evita que el logo o botón salten de línea */
+    flex-wrap: nowrap;
+    /* Evita que el logo o botón salten de línea */
     justify-content: space-between;
   }
 
@@ -1188,7 +1223,8 @@ derecha */
   .main-header .btn {
     order: 2;
     margin: 0 10px;
-    padding: 8px 15px; /* Botón un poco más pequeño en tablet */
+    padding: 8px 15px;
+    /* Botón un poco más pequeño en tablet */
   }
 
   .logo {
@@ -1196,17 +1232,37 @@ derecha */
   }
 
   /* El resto de tus estilos (Hero, Especialista, etc.) se mantienen igual */
-  .hero-content h1 { font-size: 50px; }
-  #about-us { padding-top: 20px; }
-  .service h3 { font-size: 19px; }
-  .padding-xl { padding-top: 30px; padding-bottom: 30px; }
-  
-  .form-control .col, .formulario-row {
+  .hero-content h1 {
+    font-size: 50px;
+  }
+
+  #about-us {
+    padding-top: 20px;
+  }
+
+  .service h3 {
+    font-size: 19px;
+  }
+
+  .padding-xl {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .form-control .col,
+  .formulario-row {
     flex-basis: 100%;
     max-width: 100%;
   }
-  .tf2-form-imag, .reloj-basis { display: none; }
-  .horarios-dias { flex-basis: 100% !important; }
+
+  .tf2-form-imag,
+  .reloj-basis {
+    display: none;
+  }
+
+  .horarios-dias {
+    flex-basis: 100% !important;
+  }
 }
 
 
@@ -1322,6 +1378,7 @@ derecha */
   }
 
   /* ===== VIDEO PROMOCIONAL DE YOUTUBE ===== */
+
   .container-videopromo {
     padding-left: 10%;
     padding-right: 10%;
@@ -1387,8 +1444,8 @@ derecha */
     right: 0;
     width: 33%;
     /* O el ancho que prefieras */
-    background-color: var(--color4);
-    box-shadow: 0 4px 10px var(--color2);
+    background-color: var(--colora2);
+    box-shadow: 0 4px 10px var(--colora6);
 
     /* ¡LA PIEZA CLAVE QUE FALTABA! */
     display: none;
@@ -1405,7 +1462,7 @@ derecha */
 
   /* 3. ¡El paso más importante! Cambia el color de los enlaces */
   .main-nav a {
-    color: var(--dark-color);
+    color: var(--colora5);
     /* ¡Color de texto oscuro! */
     display: block;
     /* Hace que el enlace ocupe todo el ancho */
@@ -1413,7 +1470,7 @@ derecha */
     /* Añade espaciado interno */
     text-align: left;
     /* Alinea el texto a la izquierda */
-    border-bottom: 1px solid var(--color1);
+    border-bottom: 1px solid var(--colora1);
     /* Línea separadora */
     font-size: 14px !important;
     /* Asegura el tamaño de fuente */
@@ -1421,15 +1478,15 @@ derecha */
 
   /* 4. Estilo para el enlace activo */
   .main-nav a.main-nav-active {
-    color: var(--primary-color) !important;
+    color: var(--colora3) !important;
     /* Color de acento para el activo */
-    background-color: var(--color1);
+    background-color: var(--colora1);
   }
 
   /* 5. Estilo opcional para :hover */
   .main-nav a:hover {
-    background-color: var(--color1);
-    color: var(--primary-color);
+    background-color: var(--colora1);
+    color: var(--colora3);
   }
 
   /*Muestra menu. Se ejecutara desde Javascript*/
