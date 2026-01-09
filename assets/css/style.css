@@ -377,44 +377,50 @@ img {
 }
 
 /* ========= SECCIÓN TESTIMONIOS ========= */
-#testimonials {
-  background-color: #ffffff;
+.testimonios {
+    background: var(--white);
+    overflow: hidden;
 }
 
-.carrusel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
 }
 
-.imagenes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
+.carousel-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden; /* Oculta la barra de scroll nativa */
+    cursor: grab; /* Indica que se puede arrastrar */
+    padding: 20px 0;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
 }
 
-.puntos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.carousel-container:active {
+    cursor: grabbing;
 }
 
-.puntos p {
-  font: 100px;
-  font-weight: 500;
-  margint-top: -50px;
-  color: black;
+.carousel-item {
+    min-width: 300px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.puntos .bold {
-  font-weight: 700;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: rgb(237, 187, 131);
+.carousel-item:hover {
+    transform: scale(1.02);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Evita que la imagen se arrastre como archivo al hacer drag en el carrusel */
+    display: block;
 }
 
 
